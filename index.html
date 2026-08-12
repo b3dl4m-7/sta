@@ -1052,7 +1052,7 @@ const translations = {
     "contact.opt1":"مسك الدفاتر","contact.opt2":"المحاسبة والتقارير المالية","contact.opt3":"تطبيق نظام أودو","contact.opt4":"دعم وتحسين أودو","contact.opt5":"غير متأكد بعد",
     "contact.fmessage":"الرسالة","contact.fmessagePh":"لمحة عن عملك وما تحتاج المساعدة فيه...",
     "contact.note":" ","contact.submit":"إرسال الرسالة",
-    "contact.success":"شكراً! تم فتح تطبيق البريد الإلكتروني الخاص بك مع رسالتك الجاهزة للإرسال.",
+    "contact.success":"!نشكرك على تواصلك معنا! سنرد عليك في أقرب وقت.",
     "footer.desc":"استشارات محاسبة ومسك دفاتر وتطبيق أودو للشركات النامية في دول الخليج.",
     "footer.h1":"الخدمات","footer.h2":"الشركة","footer.h3":"تواصل","footer.rights":"جميع الحقوق محفوظة.","footer.tag":"دفاتر متوازنة. أنظمة قابلة للنمو."
   }
@@ -1249,7 +1249,7 @@ form.addEventListener('submit', async function(e) {
       // Success messages matching the image exactly
       const successMessages = {
         en: 'Thanks! Your email app should now be open with your message ready to send.',
-        ar: 'شكراً! تم فتح تطبيق البريد الإلكتروني الخاص بك مع رسالتك الجاهزة للإرسال.'
+        ar: '!نشكرك على تواصلك معنا! سنرد عليك في أقرب وقت.'
       };
       
       formStatus.innerHTML = `<span class="status-icon">${checkIconSVG}</span><span class="status-text">${successMessages[lang] || successMessages.en}</span>`;
