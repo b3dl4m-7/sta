@@ -1139,14 +1139,14 @@ document.addEventListener('click', (e)=>{
 document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeMenu(); });
 
 /* ============================================================
-   CONTACT FORM — mailto submission (no backend)
+   CONTACT FORM — Web3Forms submission (no backend)
 ============================================================ */
-/* Delivers submissions to ziad.arafath@gmail.com via Formspree (no backend needed).
-   NOTE: replace YOUR_FORM_ID below with the ID from your Formspree form
-   (create one free at https://formspree.io pointed at ziad.arafath@gmail.com),
-   or swap the endpoint for any other form-to-email service. Until replaced,
-   the code below falls back to a pre-filled mailto so nothing is lost. */
-const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+/* Delivers submissions to ziad.arafath@gmail.com via Web3Forms (free, no backend needed).
+   NOTE: replace YOUR_ACCESS_KEY below with your key from https://web3forms.com —
+   go there, enter ziad.arafath@gmail.com, and it emails you a free access key
+   (no account/signup required for the basic key). Until replaced, the code
+   below falls back to a pre-filled mailto so nothing is lost. */
+const WEB3FORMS_ACCESS_KEY = 7bc6df59-ad3c-4cb7-a06e-fdd4d9e1c52a;
 const DEST_EMAIL = 'ziad.arafath@gmail.com';
 
 document.getElementById('contactForm').addEventListener('submit', async function(e){
@@ -1164,10 +1164,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
     email: f.email.value,
     phone: f.phone.value,
     service: f.service.value,
-    message: f.message.value,
-    _subject: `${subjectLabel} ${f.fname.value}`,
-    _replyto: f.email.value
+    message: f.message.value
   };
+  const subject = `${subjectLabel} ${fields.name}`;
 
   const body = [
     `${lang==='ar'?'الاسم':'Name'}: ${fields.name}`,
@@ -1178,18 +1177,31 @@ document.getElementById('contactForm').addEventListener('submit', async function
     ``,
     fields.message
   ].join('\n');
-  const mailtoFallback = `mailto:${DEST_EMAIL}?subject=${encodeURIComponent(fields._subject)}&body=${encodeURIComponent(body)}`;
+  const mailtoFallback = `mailto:${DEST_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   submitBtn.disabled = true;
   submitBtn.style.opacity = '.7';
 
   try{
-    const res = await fetch(FORM_ENDPOINT, {
+    if(WEB3FORMS_ACCESS_KEY === 'YOUR_ACCESS_KEY') throw new Error('Access key not configured');
+    const res = await fetch('https://api.web3forms.com/submit', {
       method:'POST',
-      headers:{ 'Accept':'application/json' },
-      body: new FormData(f, submitBtn) // includes all named fields automatically
+      headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: subject,
+        from_name: fields.name,
+        replyto: fields.email,
+        name: fields.name,
+        company: fields.company,
+        email: fields.email,
+        phone: fields.phone,
+        service: fields.service,
+        message: fields.message
+      })
     });
-    if(!res.ok) throw new Error('Form endpoint error');
+    const data = await res.json();
+    if(!res.ok || !data.success) throw new Error('Form endpoint error');
     showSuccess();
     f.reset();
   }catch(err){
