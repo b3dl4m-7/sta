@@ -420,6 +420,7 @@ html[data-theme="dark"] .why-section{background:linear-gradient(155deg, #0C1C18 
 .social-row a:hover{background:rgba(255,255,255,.15);transform:translateY(-2px);}
 .social-row svg{width:16px;height:16px;}
 
+/* ===== WEB3FORMS FORM STYLES ===== */
 .contact-form{padding:46px 42px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
 @media (max-width:520px){.form-row{grid-template-columns:1fr;}}
@@ -431,18 +432,78 @@ html[data-theme="dark"] .why-section{background:linear-gradient(155deg, #0C1C18 
 }
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);outline:none;}
 .field textarea{resize:vertical;min-height:90px;}
-.form-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:8px;flex-wrap:wrap;}
+.form-foot{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:8px;flex-wrap:wrap;}
 .form-note{font-size:12px;color:var(--ink-faint);max-width:280px;}
-.success-msg{
-  display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:14px;
-  background:var(--accent-soft);color:var(--accent-2);font-size:14px;font-weight:600;margin-top:16px;
-  opacity:0;max-height:0;padding-block:0;overflow:hidden;pointer-events:none;
-  transform:translateY(-8px) scale(.96);
-  transition:opacity .4s var(--ease-out), transform .5s var(--ease-bounce), max-height .5s var(--ease-out), padding .4s var(--ease-out);
+
+/* Form status messages — sits inline to the left of the submit button */
+.form-status {
+  flex:1 1 auto;
+  min-width:220px;
+  margin:0;
+  padding: 11px 16px;
+  border-radius: 12px;
+  display: none;
+  align-items: flex-start;
+  gap: 9px;
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 1.45;
+  transition: all 0.3s ease;
 }
-html[data-theme="dark"] .success-msg{color:#7FD6C1;}
-.success-msg.show{opacity:1;max-height:120px;padding-block:16px;transform:translateY(0) scale(1);pointer-events:auto;}
-.success-msg svg{width:20px;height:20px;flex-shrink:0;}
+.form-status.success {
+  display: flex;
+  background: var(--accent-soft);
+  color: var(--accent-2);
+  border: 1px solid var(--accent);
+}
+.form-status.success .status-icon{
+  flex-shrink:0;
+  width:18px;height:18px;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:1px;
+}
+.form-status.success .status-icon svg{width:15px;height:15px;color:var(--accent-2);}
+.form-status.success .status-text{font-weight:600;}
+.form-status.error {
+  display: flex;
+  align-items: center;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+.form-status.loading {
+  display: flex;
+  align-items: center;
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+html[data-theme="dark"] .form-status.error {
+  background: #442426;
+  color: #f8a8a8;
+  border-color: #661f1f;
+}
+html[data-theme="dark"] .form-status.loading {
+  background: #1a3a40;
+  color: #8dd0db;
+  border-color: #2a5a60;
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-top: 2px solid var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /* ============ FOOTER ============ */
 footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;}
@@ -559,7 +620,7 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 <!-- ============ NAV ============ -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand"><span class="mark">SAT</span><span data-i18n="brand">Syed Tanveer Ali</span></a>
+    <a href="#top" class="brand"><span class="mark"> STA</span><span data-i18n="brand">Syed Tanveer Ali</span></a>
     <nav class="nav-links" id="navLinks">
       <a href="#services" data-i18n="nav.services">Services</a>
       <a href="#why" data-i18n="nav.why">Why Odoo</a>
@@ -778,7 +839,7 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- ============ CONTACT WITH WEB3FORMS ============ -->
 <section class="section wrap" id="contact" style="padding-top:0;">
   <div class="section-head reveal">
     <span class="eyebrow" data-i18n="contact.eyebrow">Get In Touch</span>
@@ -804,48 +865,54 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
       </div>
     </div>
 
-    <form class="contact-form" id="contactForm">
+    <!-- WEB3FORMS CONTACT FORM -->
+    <form class="contact-form" id="web3Form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="7bc6df59-ad3c-4cb7-a06e-fdd4d9e1c52a">
+      
+      <!-- Subject for email notifications -->
+      <input type="hidden" name="subject" value="New Contact Form Submission - Syed Tanveer Ali">
+      
+      <!-- Honeypot field to prevent spam -->
+      <input type="checkbox" name="botcheck" style="display: none;">
+      
       <div class="form-row">
         <div class="field">
-          <label for="fname" data-i18n="contact.fname">Full name</label>
-          <input type="text" id="fname" name="fname" required autocomplete="name">
+          <label for="fname" data-i18n="contact.fname">Full name *</label>
+          <input type="text" id="fname" name="name" required autocomplete="name" placeholder="John Doe">
         </div>
         <div class="field">
           <label for="company" data-i18n="contact.fcompany">Company</label>
-          <input type="text" id="company" name="company" autocomplete="organization">
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your Company Name">
         </div>
       </div>
       <div class="form-row">
         <div class="field">
-          <label for="email" data-i18n="contact.femail">Email</label>
-          <input type="email" id="email" name="email" required autocomplete="email">
+          <label for="email" data-i18n="contact.femail">Email *</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
         </div>
         <div class="field">
           <label for="phone" data-i18n="contact.fphone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel">
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+971 50 123 4567">
         </div>
       </div>
       <div class="field">
         <label for="service" data-i18n="contact.fservice">Service you need</label>
         <select id="service" name="service">
-          <option data-i18n="contact.opt1">Bookkeeping</option>
-          <option data-i18n="contact.opt2">Accounting &amp; Financial Reporting</option>
-          <option data-i18n="contact.opt3">Odoo ERP Implementation</option>
-          <option data-i18n="contact.opt4">Odoo Support &amp; Optimisation</option>
-          <option data-i18n="contact.opt5">Not sure yet</option>
+          <option value="Bookkeeping" data-i18n="contact.opt1">Bookkeeping</option>
+          <option value="Accounting &amp; Financial Reporting" data-i18n="contact.opt2">Accounting &amp; Financial Reporting</option>
+          <option value="Odoo ERP Implementation" data-i18n="contact.opt3">Odoo ERP Implementation</option>
+          <option value="Odoo Support &amp; Optimisation" data-i18n="contact.opt4">Odoo Support &amp; Optimisation</option>
+          <option value="Not sure yet" data-i18n="contact.opt5">Not sure yet</option>
         </select>
       </div>
       <div class="field">
-        <label for="message" data-i18n="contact.fmessage">Message</label>
-        <textarea id="message" name="message" data-i18n-placeholder="contact.fmessagePh" placeholder="A little about your business and what you need help with..."></textarea>
+        <label for="message" data-i18n="contact.fmessage">Message *</label>
+        <textarea id="message" name="message" required data-i18n-placeholder="contact.fmessagePh" placeholder="A little about your business and what you need help with..."></textarea>
       </div>
       <div class="form-foot">
-        <span class="form-note" data-i18n="contact.note">Submitting opens a pre-filled email to send directly — no data is stored.</span>
-        <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Send Message</button>
-      </div>
-      <div class="success-msg" id="successMsg">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        <span data-i18n="contact.success">Thanks! Your email app should now be open with your message ready to send.</span>
+        <div id="formStatus" class="form-status"></div>
+        <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="contact.submit">Send Message</button>
       </div>
     </form>
   </div>
@@ -856,7 +923,7 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 <footer class="wrap">
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="brand"><span class="mark">SAT</span><span data-i18n="brand">Syed Tanveer Ali</span></div>
+      <div class="brand"><span class="mark"> STA</span><span data-i18n="brand">Syed Tanveer Ali</span></div>
       <p data-i18n="footer.desc">Accounting, bookkeeping, and Odoo ERP consulting for growing businesses across the GCC.</p>
     </div>
     <div class="footer-links">
@@ -935,7 +1002,7 @@ const translations = {
     "contact.fname":"Full name","contact.fcompany":"Company","contact.femail":"Email","contact.fphone":"Phone","contact.fservice":"Service you need",
     "contact.opt1":"Bookkeeping","contact.opt2":"Accounting &amp; Financial Reporting","contact.opt3":"Odoo ERP Implementation","contact.opt4":"Odoo Support &amp; Optimisation","contact.opt5":"Not sure yet",
     "contact.fmessage":"Message","contact.fmessagePh":"A little about your business and what you need help with...",
-    "contact.note":"Submitting opens a pre-filled email to send directly — no data is stored.","contact.submit":"Send Message",
+    "contact.note":" ","contact.submit":"Send Message",
     "contact.success":"Thanks! Your email app should now be open with your message ready to send.",
     "footer.desc":"Accounting, bookkeeping, and Odoo ERP consulting for growing businesses across the GCC.",
     "footer.h1":"Services","footer.h2":"Company","footer.h3":"Contact","footer.rights":"All rights reserved.","footer.tag":"Books that balance. Systems that scale."
@@ -984,8 +1051,8 @@ const translations = {
     "contact.fname":"الاسم الكامل","contact.fcompany":"اسم الشركة","contact.femail":"البريد الإلكتروني","contact.fphone":"رقم الهاتف","contact.fservice":"الخدمة المطلوبة",
     "contact.opt1":"مسك الدفاتر","contact.opt2":"المحاسبة والتقارير المالية","contact.opt3":"تطبيق نظام أودو","contact.opt4":"دعم وتحسين أودو","contact.opt5":"غير متأكد بعد",
     "contact.fmessage":"الرسالة","contact.fmessagePh":"لمحة عن عملك وما تحتاج المساعدة فيه...",
-    "contact.note":"الإرسال سيفتح رسالة بريد إلكتروني معبأة مسبقًا لإرسالها مباشرة — لا يتم تخزين أي بيانات.","contact.submit":"إرسال الرسالة",
-    "contact.success":"شكرًا لك! يفترض أن يفتح تطبيق البريد الآن برسالتك جاهزة للإرسال.",
+    "contact.note":" ","contact.submit":"إرسال الرسالة",
+    "contact.success":"شكراً! تم فتح تطبيق البريد الإلكتروني الخاص بك مع رسالتك الجاهزة للإرسال.",
     "footer.desc":"استشارات محاسبة ومسك دفاتر وتطبيق أودو للشركات النامية في دول الخليج.",
     "footer.h1":"الخدمات","footer.h2":"الشركة","footer.h3":"تواصل","footer.rights":"جميع الحقوق محفوظة.","footer.tag":"دفاتر متوازنة. أنظمة قابلة للنمو."
   }
@@ -1140,95 +1207,107 @@ document.addEventListener('click', (e)=>{
 document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeMenu(); });
 
 /* ============================================================
-   CONTACT FORM — Web3Forms submission (no backend)
+   WEB3FORMS INTEGRATION — AJAX submission with status feedback
 ============================================================ */
-/* Delivers submissions to ziad.arafath@gmail.com via Web3Forms (free, no backend needed).
-   NOTE: replace YOUR_ACCESS_KEY below with your key from https://web3forms.com —
-   go there, enter ziad.arafath@gmail.com, and it emails you a free access key
-   (no account/signup required for the basic key). Until replaced, the code
-   below falls back to a pre-filled mailto so nothing is lost. */
-const WEB3FORMS_ACCESS_KEY = '7bc6df59-ad3c-4cb7-a06e-fdd4d9e1c52a';
-const DEST_EMAIL = 'ziad.arafath@gmail.com';
+const form = document.getElementById('web3Form');
+const formStatus = document.getElementById('formStatus');
+const submitBtn = document.getElementById('submitBtn');
+const checkIconSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
 
-<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="7bc6df59-ad3c-4cb7-a06e-fdd4d9e1c52a">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
-</form>
-
-document.getElementById('contactForm').addEventListener('submit', async function(e){
+// Remove default form submission to handle via AJAX
+form.addEventListener('submit', async function(e) {
   e.preventDefault();
-  const f = this;
-  const lang = root.getAttribute('lang');
-  const subjectLabel = lang === 'ar' ? 'طلب استشارة من' : 'Consultation request from';
-  const submitBtn = f.querySelector('button[type="submit"]');
-  const originalLabel = submitBtn.textContent;
-  const successEl = document.getElementById('successMsg');
-
-  const fields = {
-    name: f.fname.value,
-    company: f.company.value,
-    email: f.email.value,
-    phone: f.phone.value,
-    service: f.service.value,
-    message: f.message.value
-  };
-  const subject = `${subjectLabel} ${fields.name}`;
-
-  const body = [
-    `${lang==='ar'?'الاسم':'Name'}: ${fields.name}`,
-    `${lang==='ar'?'الشركة':'Company'}: ${fields.company}`,
-    `${lang==='ar'?'البريد الإلكتروني':'Email'}: ${fields.email}`,
-    `${lang==='ar'?'الهاتف':'Phone'}: ${fields.phone}`,
-    `${lang==='ar'?'الخدمة':'Service'}: ${fields.service}`,
-    ``,
-    fields.message
-  ].join('\n');
-  const mailtoFallback = `mailto:${DEST_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+  
+  // Get the submit button text for later restoration
+  const originalText = submitBtn.textContent;
+  
+  // Show loading state
+  formStatus.className = 'form-status loading';
+  formStatus.innerHTML = '<span class="spinner"></span> Sending your message...';
   submitBtn.disabled = true;
-  submitBtn.style.opacity = '.7';
-
-  try{
-    if(WEB3FORMS_ACCESS_KEY === 'YOUR_ACCESS_KEY') throw new Error('Access key not configured');
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method:'POST',
-      headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_ACCESS_KEY,
-        subject: subject,
-        from_name: fields.name,
-        replyto: fields.email,
-        name: fields.name,
-        company: fields.company,
-        email: fields.email,
-        phone: fields.phone,
-        service: fields.service,
-        message: fields.message
-      })
+  submitBtn.style.opacity = '0.7';
+  
+  // Get form data
+  const formData = new FormData(form);
+  
+  try {
+    // Submit to Web3Forms API
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
     });
-    const data = await res.json();
-    if(!res.ok || !data.success) throw new Error('Form endpoint error');
-    showSuccess();
-    f.reset();
-  }catch(err){
-    // fall back to opening a pre-filled email so the message is never lost
-    window.location.href = mailtoFallback;
-    showSuccess();
-  }finally{
+    
+    const data = await response.json();
+    
+    if (response.ok && data.success) {
+      // Success - Show the message exactly like in the image
+      formStatus.className = 'form-status success';
+      
+      // Get the current language
+      const lang = root.getAttribute('lang') || 'en';
+      
+      // Success messages matching the image exactly
+      const successMessages = {
+        en: 'Thanks! Your email app should now be open with your message ready to send.',
+        ar: 'شكراً! تم فتح تطبيق البريد الإلكتروني الخاص بك مع رسالتك الجاهزة للإرسال.'
+      };
+      
+      formStatus.innerHTML = `<span class="status-icon">${checkIconSVG}</span><span class="status-text">${successMessages[lang] || successMessages.en}</span>`;
+      form.reset();
+      
+      // Optional: Send to Google Analytics if available
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submission', {
+          'event_category': 'Contact',
+          'event_label': 'Web3Forms'
+        });
+      }
+      
+    } else {
+      // Error from the API
+      formStatus.className = 'form-status error';
+      const errorMsg = data.message || 'Something went wrong. Please try again.';
+      formStatus.innerHTML = `❌ Error: ${errorMsg}`;
+    }
+    
+  } catch (error) {
+    // Network or other error
+    formStatus.className = 'form-status error';
+    formStatus.innerHTML = '❌ Network error. Please check your connection and try again.';
+    console.error('Form submission error:', error);
+  } finally {
+    // Reset button state
     submitBtn.disabled = false;
     submitBtn.style.opacity = '';
+    submitBtn.textContent = originalText;
+    
+    // Auto-hide status after 10 seconds
+    setTimeout(() => {
+      formStatus.className = 'form-status';
+      formStatus.innerHTML = '';
+    }, 10000);
   }
+});
 
-  function showSuccess(){
-    successEl.classList.remove('show');
-    // force reflow so the re-add re-triggers the bouncy transition on repeat submits
-    void successEl.offsetWidth;
-    successEl.classList.add('show');
-    submitBtn.textContent = originalLabel;
-  }
+// Real-time field validation
+document.querySelectorAll('#web3Form input, #web3Form textarea').forEach(input => {
+  input.addEventListener('blur', function() {
+    if (this.hasAttribute('required') && !this.value.trim()) {
+      this.style.borderColor = '#dc3545';
+    } else {
+      this.style.borderColor = 'var(--line)';
+    }
+  });
+  
+  input.addEventListener('input', function() {
+    if (this.value.trim()) {
+      this.style.borderColor = 'var(--accent)';
+    } else if (this.hasAttribute('required')) {
+      this.style.borderColor = '#dc3545';
+    } else {
+      this.style.borderColor = 'var(--line)';
+    }
+  });
 });
 
 /* ============================================================
@@ -1237,6 +1316,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 document.getElementById('copyright').innerHTML = `© ${new Date().getFullYear()} Syed Tanveer Ali. <span data-i18n="footer.rights">All rights reserved.</span>`;
 initTheme();
 applyLang(localStorage.getItem('sat-lang') || 'en');
+
 </script>
 </body>
 </html>
