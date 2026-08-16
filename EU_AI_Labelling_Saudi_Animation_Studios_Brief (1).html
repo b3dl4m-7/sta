@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Credits Will Roll Differently — EU AI Labelling & Saudi Studios</title>
+
+<!-- AI TRANSPARENCY DISCLOSURE — machine-readable markers -->
+<meta name="ai-generated" content="true">
+<meta name="ai-disclosure" content="AI-assisted. Drafted with an AI language model; researched, verified, edited and approved under named human editorial oversight.">
+<meta name="ai-human-oversight" content="true">
+<meta name="ai-oversight-party" content="Syed Tanveer Ali FCCA, CMA">
+<meta name="ai-content-scope" content="Text and code-drawn diagrams. No synthetic media.">
+<meta name="ai-disclosure-date" content="2026-08-13">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --screen:#0B0E14;          /* screening-room black       */
+  --screen-2:#131826;        /* raised card                */
+  --screen-3:#1B2234;        /* higher card                */
+  --paper:#F2EEE3;
+  --projector:#E8A33D;       /* projector amber            */
+  --projector-dim:#B87A2B;
+  --cell:#4FA3E3;            /* cel blue                   */
+  --seal:#2E9B77;            /* go green                   */
+  --alert:#E05545;           /* stop red                   */
+  --muted:#7A8699;
+  --line:#252E44;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Source Serif 4",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--screen);color:var(--paper);font-family:var(--body);
+  font-size:17.5px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+
+/* ============ MASTHEAD ============ */
+header.mast{position:relative;padding:74px 0 60px;overflow:hidden;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(232,163,61,.14), transparent 60%),
+    var(--screen);}
+.sprocket{position:absolute;top:0;bottom:0;width:26px;opacity:.5;
+  background-image:radial-gradient(circle at 50% 50%, var(--line) 5px, transparent 6px);
+  background-size:26px 40px;}
+.sprocket.l{left:8px;} .sprocket.r{right:8px;}
+.kick{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--projector);display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:26px;}
+.kick .d{width:5px;height:5px;border-radius:50%;background:var(--cell);}
+h1{font-family:var(--display);font-weight:900;letter-spacing:-.028em;line-height:.97;
+  font-size:clamp(2.6rem,7.6vw,4.7rem);margin:0 0 24px;}
+h1 em{font-style:normal;color:var(--projector);}
+.standfirst{font-size:1.16rem;line-height:1.62;color:#B8C2D4;max-width:640px;margin:0;}
+.byline{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;}
+.byline .nm{font-family:var(--display);font-weight:600;font-size:1.02rem;}
+.byline .rl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;}
+.ai-badge{display:inline-flex;align-items:center;gap:8px;margin-top:22px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  border:1px solid var(--projector-dim);color:var(--projector);padding:7px 12px;border-radius:2px;text-decoration:none;}
+.ai-badge .gl{width:14px;height:14px;border:1.5px solid currentColor;border-radius:50%;
+  display:grid;place-items:center;font-size:7.5px;font-weight:600;flex:none;}
+
+/* ============ STRUCTURE ============ */
+main{padding:58px 0 0;}
+h2{font-family:var(--display);font-weight:900;letter-spacing:-.02em;line-height:1.06;
+  font-size:clamp(1.7rem,4.4vw,2.5rem);margin:76px 0 10px;}
+h2 .num{display:block;font-family:var(--mono);font-size:11px;font-weight:600;
+  letter-spacing:.24em;color:var(--cell);margin-bottom:13px;text-transform:uppercase;}
+p{margin:0 0 18px;color:#CFD6E2;}
+p strong{color:var(--paper);font-weight:600;}
+.slate{display:flex;align-items:center;gap:14px;margin:54px 0;}
+.slate .ln{flex:1;height:1px;background:var(--line);}
+.slate .sl{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--muted);
+  border:1px solid var(--line);padding:5px 11px;border-radius:2px;text-transform:uppercase;}
+
+/* ============ BIG STAT ROW ============ */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:38px 0;}
+.stat{background:var(--screen-2);border:1px solid var(--line);border-radius:5px;padding:22px 18px;}
+.stat .v{font-family:var(--display);font-weight:900;font-size:2.2rem;letter-spacing:-.03em;line-height:1;color:var(--projector);}
+.stat .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:10px;line-height:1.6;}
+
+/* ============ MODULE SHELL ============ */
+.module{background:var(--screen-2);border:1px solid var(--line);border-radius:6px;
+  padding:34px 28px;margin:46px 0;}
+.mod-k{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--projector);margin-bottom:8px;}
+.mod-t{font-family:var(--display);font-weight:600;font-size:1.42rem;margin:0 0 22px;line-height:1.14;color:var(--paper);}
+
+/* ============ REACH TEST (decision) ============ */
+.q-step{display:none;}
+.q-step.on{display:block;animation:fade .25s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+.q-txt{font-family:var(--display);font-weight:600;font-size:1.28rem;line-height:1.3;margin:0 0 20px;color:var(--paper);}
+.q-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.q-btns button{background:var(--screen-3);border:1px solid var(--line);border-radius:4px;
+  color:#C8D0DE;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+  padding:16px;cursor:pointer;transition:.16s;}
+.q-btns button:hover{border-color:var(--cell);color:var(--paper);}
+.q-btns button:focus-visible{outline:2px solid var(--projector);outline-offset:2px;}
+.verdict{border-radius:5px;padding:24px;font-size:16px;line-height:1.62;}
+.verdict.hit{background:rgba(224,85,69,.1);border:1px solid rgba(224,85,69,.45);}
+.verdict.miss{background:rgba(46,155,119,.1);border:1px solid rgba(46,155,119,.45);}
+.verdict h4{font-family:var(--display);font-weight:900;font-size:1.3rem;margin:0 0 10px;}
+.verdict.hit h4{color:var(--alert);} .verdict.miss h4{color:var(--seal);}
+.verdict p{color:#C8D0DE;margin:0 0 10px;}
+.restart{margin-top:16px;background:none;border:1px solid var(--line);color:var(--muted);
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  padding:9px 15px;border-radius:3px;cursor:pointer;}
+.restart:hover{color:var(--paper);border-color:var(--muted);}
+.q-crumb{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:16px;}
+
+/* ============ PIPELINE SVG ============ */
+.pipewrap{margin:34px 0;background:var(--screen-2);border:1px solid var(--line);border-radius:6px;padding:26px 20px 20px;}
+.pipewrap svg{width:100%;height:auto;display:block;}
+.cap{font-family:var(--mono);font-size:11.5px;line-height:1.7;color:var(--muted);margin-top:16px;}
+.cap b{color:var(--projector);font-weight:500;}
+
+/* ============ CLAUSE CARDS ============ */
+.clauses{display:grid;gap:10px;margin:30px 0;}
+details.cl{border:1px solid var(--line);border-left:4px solid var(--alert);border-radius:4px;
+  background:var(--screen-2);overflow:hidden;}
+details.cl[open]{background:var(--screen-3);}
+details.cl summary{cursor:pointer;padding:16px 20px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;}
+details.cl summary::-webkit-details-marker{display:none;}
+details.cl summary .t{font-family:var(--display);font-weight:600;font-size:1.06rem;color:var(--paper);}
+details.cl summary .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--alert);
+  border:1px solid rgba(224,85,69,.5);padding:3px 8px;border-radius:2px;text-transform:uppercase;flex:none;}
+details.cl summary::after{content:"+";font-family:var(--mono);color:var(--alert);font-size:1.2rem;margin-left:4px;}
+details.cl[open] summary::after{content:"−";}
+details.cl .bd{padding:0 20px 20px;font-size:15.5px;line-height:1.66;color:#C8D0DE;}
+details.cl .bd .ask{font-family:var(--mono);font-size:12px;background:var(--screen);border-left:2px solid var(--projector);
+  padding:12px 14px;margin-top:14px;color:#D8C9A8;line-height:1.7;border-radius:0 3px 3px 0;}
+details.cl .bd .ask b{color:var(--projector);}
+
+/* ============ TOOL REGISTRY ============ */
+.tools{width:100%;border-collapse:collapse;margin:28px 0 8px;font-size:15px;}
+.tools th{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--cell);
+  text-align:left;padding:0 12px 10px 0;border-bottom:2px solid var(--line);}
+.tools td{padding:14px 12px 14px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55;color:#C8D0DE;}
+.tools td:first-child{font-weight:600;color:var(--paper);font-family:var(--display);white-space:nowrap;}
+.pill{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 9px;border-radius:2px;white-space:nowrap;}
+.pill.opt{background:rgba(46,155,119,.15);color:var(--seal);border:1px solid rgba(46,155,119,.4);}
+.pill.def{background:rgba(224,85,69,.14);color:var(--alert);border:1px solid rgba(224,85,69,.4);}
+.pill.ext{background:rgba(79,163,227,.14);color:var(--cell);border:1px solid rgba(79,163,227,.4);}
+.pill.gap{background:rgba(232,163,61,.14);color:var(--projector);border:1px solid rgba(232,163,61,.4);}
+
+/* ============ AI OWNER CARD ============ */
+.owner{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:28px 0;}
+.owner .o{background:var(--screen-3);border:1px solid var(--line);border-radius:5px;padding:20px;}
+.owner .o h5{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cell);margin:0 0 10px;}
+.owner .o p{font-size:14.5px;line-height:1.6;margin:0;color:#C8D0DE;}
+
+/* ============ DAY-ONE STACK ============ */
+.stack{counter-reset:s;display:grid;gap:0;margin:30px 0;}
+.stack .lay{counter-increment:s;position:relative;background:var(--screen-2);
+  border:1px solid var(--line);border-radius:5px;padding:20px 22px 20px 66px;margin-bottom:8px;}
+.stack .lay::before{content:"0" counter(s);position:absolute;left:20px;top:20px;
+  font-family:var(--mono);font-size:13px;color:var(--projector);letter-spacing:.06em;}
+.stack .lay h5{font-family:var(--display);font-weight:600;font-size:1.08rem;margin:0 0 6px;color:var(--paper);}
+.stack .lay p{font-size:14.5px;line-height:1.6;margin:0;color:#B8C2D4;}
+
+/* ============ QUESTIONS GRID ============ */
+.qs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:30px 0;}
+.qs .q{background:var(--screen-2);border:1px solid var(--line);border-top:3px solid var(--cell);
+  border-radius:4px;padding:18px 18px 16px;}
+.qs .q .n{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--cell);margin-bottom:8px;text-transform:uppercase;}
+.qs .q p{font-size:14.5px;line-height:1.55;margin:0;color:#CFD6E2;}
+
+/* ============ QUOTE ============ */
+blockquote{margin:44px 0;padding-left:24px;border-left:3px solid var(--projector);
+  font-family:var(--display);font-weight:300;font-size:1.42rem;line-height:1.38;letter-spacing:-.01em;color:var(--paper);}
+blockquote cite{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  font-style:normal;color:var(--muted);margin-top:12px;text-transform:uppercase;}
+
+.note{font-family:var(--mono);font-size:12px;line-height:1.75;color:var(--muted);
+  border:1px dashed var(--line);padding:17px 19px;border-radius:4px;margin:36px 0;}
+.note b{color:#C8D0DE;}
+
+/* ============ FOOTER ============ */
+footer{background:#070A10;margin-top:80px;padding:50px 0 44px;border-top:1px solid var(--line);}
+footer .src{font-family:var(--mono);font-size:11.5px;line-height:1.9;color:var(--muted);}
+footer .src b{color:#9AA6BA;display:block;margin-bottom:10px;letter-spacing:.16em;font-size:10px;text-transform:uppercase;font-weight:500;}
+footer .sig{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;}
+footer .sig .nm{font-family:var(--display);font-weight:600;font-size:1.1rem;}
+footer .sig .rl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;}
+footer .dl{margin-top:18px;padding-top:16px;border-top:1px solid rgba(232,163,61,.25);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;line-height:1.8;color:var(--projector);}
+
+@media(max-width:640px){
+  body{font-size:16.5px;}
+  .stats{grid-template-columns:1fr;}
+  .owner{grid-template-columns:1fr;}
+  .qs{grid-template-columns:1fr;}
+  .q-btns{grid-template-columns:1fr;}
+  .module{padding:26px 20px;}
+  .tools{font-size:13.5px;}
+  .tools td:first-child{white-space:normal;}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="sprocket l"></div><div class="sprocket r"></div>
+  <div class="wrap">
+    <div class="kick"><span>Film &amp; Animation</span><span class="d"></span><span>EU AI Act · Art. 50</span><span class="d"></span><span>Kingdom of Saudi Arabia</span></div>
+    <h1>The Credits<br>Will Roll<br><em>Differently.</em></h1>
+    <p class="standfirst">Europe's AI labelling rules are live. Netflix already wrote its own. For Saudi animation and film studios — Telfaz11, Myrkott, and every startup rendering its first frame — the question is no longer <em>whether</em> to track AI in the pipeline. It's whether you can prove it, shot by shot.</p>
+    <div class="byline">
+      <span class="nm">Syed Tanveer Ali <span style="font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted);">FCCA, CMA</span></span>
+      <span class="rl">Finance &amp; Accounting · Odoo Functional Consultant</span>
+    </div>
+    <a class="ai-badge" href="#disclosure-f"><span class="gl">AI</span>AI-Assisted · Human Reviewed</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="stats">
+  <div class="stat"><div class="v">2 AUG</div><div class="l">Article 50 transparency obligations in force, 2026</div></div>
+  <div class="stat"><div class="v">SHOT-LEVEL</div><div class="l">Granularity of AI logging Netflix expects from production partners</div></div>
+  <div class="stat"><div class="v">1 WORD</div><div class="l">What decides your labelling burden: is the work "evidently" fiction?</div></div>
+</div>
+
+<p>Three regimes now sit on top of a Saudi studio at once: <strong>EU law</strong> if the work reaches European audiences, <strong>commissioner rules</strong> written by Netflix for every production partner and vendor, and <strong>Saudi frameworks</strong> — SDAIA guidance hardening through the Year of AI, PDPL, and CST cloud rules underneath it all. None of the three asks whether you used AI. All three ask whether you can <em>show</em> how.</p>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel One · Does Brussels Reach You?</span><span class="ln"></span></div>
+
+<h2><span class="num">01 · The Reach Test</span>Answer three questions.</h2>
+
+<p>The Act applies to providers and deployers when the AI output is <strong>used in the Union</strong> — including content accessible to EU audiences on the open web. Domicile in Riyadh is not a shield. Walk through it:</p>
+
+<div class="module">
+  <div class="mod-k">Interactive · 60 seconds</div>
+  <p class="mod-t">Is your studio in scope of Article 50?</p>
+
+  <div class="q-step on" id="q1">
+    <div class="q-crumb">Question 1 of 3</div>
+    <p class="q-txt">Will the finished work be distributed, streamed, or accessible to audiences in the EU — including via a global platform?</p>
+    <div class="q-btns">
+      <button onclick="go('q2')">Yes / Probably</button>
+      <button onclick="go('v-miss1')">No — Regional Only</button>
+    </div>
+  </div>
+
+  <div class="q-step" id="q2">
+    <div class="q-crumb">Question 2 of 3</div>
+    <p class="q-txt">Does any AI system in your pipeline generate or manipulate image, audio, or video — including upscaling, cleanup, style transfer, or synthetic voice?</p>
+    <div class="q-btns">
+      <button onclick="go('q3')">Yes</button>
+      <button onclick="go('v-miss2')">No — Fully Manual</button>
+    </div>
+  </div>
+
+  <div class="q-step" id="q3">
+    <div class="q-crumb">Question 3 of 3</div>
+    <p class="q-txt">Is the work evidently fictional or artistic — animation, drama, satire — rather than informational, commercial, or documentary-style content?</p>
+    <div class="q-btns">
+      <button onclick="go('v-art')">Yes — Evident Fiction</button>
+      <button onclick="go('v-full')">No / Mixed / Trailers &amp; Ads Too</button>
+    </div>
+  </div>
+
+  <div class="q-step" id="v-art">
+    <div class="verdict hit">
+      <h4>In scope — reduced regime</h4>
+      <p>Article 50(4) gives evidently artistic, creative, satirical and fictional works a lighter path: you must still <strong>disclose the existence</strong> of AI-generated or manipulated content, but in a way that doesn't hamper enjoyment — accompanying materials or credits, not a watermark across every frame.</p>
+      <p><strong>Do not relax.</strong> The final EU guidance interprets these categories narrowly, and content that is informative or commercial — your trailers, promos, behind-the-scenes marketing — cannot use the reduced regime. Your film may qualify; your ad campaign for it may not.</p>
+    </div>
+    <button class="restart" onclick="go('q1')">↺ Run again</button>
+  </div>
+
+  <div class="q-step" id="v-full">
+    <div class="verdict hit">
+      <h4>In scope — full obligations</h4>
+      <p>Final outputs must be <strong>marked and machine-detectable</strong> as AI-generated. Deepfake-class content — anything resembling real people, places, or events that could pass as authentic — needs clear disclosure. Marketing and commercial content gets no artistic discount.</p>
+      <p>Good news from the final guidelines: <strong>closed-loop production workflows are recognised</strong> — intermediate stages don't need marking. Only what leaves the building must carry it.</p>
+    </div>
+    <button class="restart" onclick="go('q1')">↺ Run again</button>
+  </div>
+
+  <div class="q-step" id="v-miss1">
+    <div class="verdict miss">
+      <h4>Likely out of EU scope — today</h4>
+      <p>No EU audience, no EU obligation. But two cautions: global platforms make "regional only" fragile — one licensing deal changes your answer — and Saudi frameworks (SDAIA deepfake and generative AI guidance, hardening through 2026) apply regardless.</p>
+    </div>
+    <button class="restart" onclick="go('q1')">↺ Run again</button>
+  </div>
+
+  <div class="q-step" id="v-miss2">
+    <div class="verdict miss">
+      <h4>Out of Article 50 — verify that claim</h4>
+      <p>"Fully manual" is a strong statement in 2026. Toon Boom's Ember, Adobe's Firefly features, plugin AI in compositing — embedded AI counts. Before certifying a no-AI pipeline to anyone, audit what's actually switched on. Reel Three below shows why.</p>
+    </div>
+    <button class="restart" onclick="go('q1')">↺ Run again</button>
+  </div>
+</div>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel Two · The Pipeline Carve-Out</span><span class="ln"></span></div>
+
+<h2><span class="num">02 · Where Marking Bites</span>Inside the pipeline: nothing.<br>At delivery: everything.</h2>
+
+<p>The single most studio-friendly line in the final EU guidelines: outputs used in <strong>closed-loop production workflows for film, animation and games don't need marking at intermediate stages</strong>. Only the final output must be marked and detectable. The B2B carve-out holds if outputs stay inside the organisation, protected by safeguards — cloud isolation, role-based access.</p>
+
+<div class="pipewrap">
+<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animation pipeline diagram showing marking-free intermediate stages and marking obligations at delivery">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4FA3E3"/>
+    </marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8A33D"/>
+    </marker>
+  </defs>
+
+  <!-- Closed loop zone -->
+  <rect x="14" y="46" width="500" height="196" rx="10" fill="none" stroke="#2E9B77" stroke-width="1.6" stroke-dasharray="7 6"/>
+  <text x="30" y="34" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2E9B77" letter-spacing="2">CLOSED LOOP — NO MARKING REQUIRED</text>
+
+  <!-- Stage boxes -->
+  <g font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#F2EEE3">
+    <rect x="36" y="74" width="130" height="56" rx="6" fill="#1B2234" stroke="#252E44"/>
+    <text x="101" y="98" text-anchor="middle">CONCEPT</text>
+    <text x="101" y="116" text-anchor="middle" font-size="10.5" fill="#7A8699">AI ideation OK</text>
+
+    <rect x="200" y="74" width="130" height="56" rx="6" fill="#1B2234" stroke="#252E44"/>
+    <text x="265" y="98" text-anchor="middle">BOARDS/ANIM</text>
+    <text x="265" y="116" text-anchor="middle" font-size="10.5" fill="#7A8699">Ember, plugins</text>
+
+    <rect x="364" y="74" width="130" height="56" rx="6" fill="#1B2234" stroke="#252E44"/>
+    <text x="429" y="98" text-anchor="middle">COMP/RENDER</text>
+    <text x="429" y="116" text-anchor="middle" font-size="10.5" fill="#7A8699">Upscale, cleanup</text>
+
+    <rect x="200" y="164" width="130" height="56" rx="6" fill="#1B2234" stroke="#252E44"/>
+    <text x="265" y="188" text-anchor="middle">AUDIO/DUB</text>
+    <text x="265" y="206" text-anchor="middle" font-size="10.5" fill="#7A8699">Synthetic voice ⚠</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <line x1="166" y1="102" x2="196" y2="102" stroke="#4FA3E3" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="330" y1="102" x2="360" y2="102" stroke="#4FA3E3" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M429,130 L429,192 L334,192" stroke="#4FA3E3" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Gate -->
+  <path d="M265,220 L265,262 L560,262" stroke="#E8A33D" stroke-width="2.4" fill="none" marker-end="url(#arrA)"/>
+  <rect x="566" y="234" width="210" height="58" rx="6" fill="#E8A33D"/>
+  <text x="671" y="258" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#0B0E14" font-weight="600">FINAL OUTPUT</text>
+  <text x="671" y="277" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#0B0E14">MARKED + DETECTABLE</text>
+
+  <!-- Three delivery lanes -->
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#B8C2D4">
+    <line x1="671" y1="234" x2="671" y2="150" stroke="#E8A33D" stroke-width="1.6" stroke-dasharray="4 4"/>
+    <rect x="566" y="96" width="210" height="52" rx="6" fill="#131826" stroke="#252E44"/>
+    <text x="671" y="117" text-anchor="middle" fill="#F2EEE3">FEATURE / SERIES</text>
+    <text x="671" y="134" text-anchor="middle" font-size="10" fill="#2E9B77">ART.50(4) — CREDITS DISCLOSURE</text>
+
+    <rect x="566" y="26" width="210" height="52" rx="6" fill="#131826" stroke="#252E44"/>
+    <line x1="671" y1="96" x2="671" y2="78" stroke="#E8A33D" stroke-width="1.6" stroke-dasharray="4 4"/>
+    <text x="671" y="47" text-anchor="middle" fill="#F2EEE3">TRAILERS / ADS / PROMO</text>
+    <text x="671" y="64" text-anchor="middle" font-size="10" fill="#E05545">FULL LABELLING — NO CARVE-OUT</text>
+  </g>
+
+  <!-- Safeguards note -->
+  <text x="30" y="312" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#7A8699" letter-spacing="1">B2B CARVE-OUT CONDITIONS: STAYS IN-ORG · CLOUD ISOLATION · ROLE-BASED ACCESS</text>
+</svg>
+<p class="cap"><b>Read the fork carefully.</b> The same AI-assisted footage exits your pipeline twice: as the film (credits-level disclosure under the artistic regime) and as the trailer (full labelling — commercial content is excluded from the carve-out, narrowly interpreted). One pipeline, two obligations.</p>
+</div>
+
+<blockquote>
+  Clearly fantastical content — dragons, humans flying unaided — falls outside the deepfake definition. Your talking camel is safe. Your photoreal Riyadh street scene is not.
+  <cite>EU draft guidelines, deepfake scope — applied to animation</cite>
+</blockquote>
+
+<h2 style="margin-top:64px;"><span class="num">02b · Your Gates Are the Checkpoints</span>You already run five approvals.<br>Ride them.</h2>
+
+<p>A standard animation production runs Development → Pre-Production → Shot-Production → Post-Production, punctuated by approval gates: <strong>script, characters &amp; locations, animatic with colour, 3D animation, final pilot</strong> — roughly 50 + 30 + 50 days of gated work. The mistake would be building AI governance as a sixth parallel process. The move is to attach one AI question to each gate you already hold:</p>
+
+<div class="pipewrap">
+<svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animation production and approval process with AI checkpoints mapped to the five approval gates">
+  <defs>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7A8699"/>
+    </marker>
+  </defs>
+
+  <!-- Phase lane labels -->
+  <g font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2">
+    <text x="24" y="30" fill="#4FA3E3">DEVELOPMENT</text>
+    <text x="24" y="168" fill="#2E9B77">PRE-PRODUCTION</text>
+    <text x="24" y="306" fill="#B08FE0">SHOT-PRODUCTION</text>
+    <text x="24" y="444" fill="#E05545">POST-PRODUCTION</text>
+  </g>
+  <line x1="24" y1="40" x2="470" y2="40" stroke="#252E44" stroke-width="1"/>
+  <line x1="24" y1="178" x2="470" y2="178" stroke="#252E44" stroke-width="1"/>
+  <line x1="24" y1="316" x2="470" y2="316" stroke="#252E44" stroke-width="1"/>
+  <line x1="24" y1="454" x2="470" y2="454" stroke="#252E44" stroke-width="1"/>
+
+  <!-- DEVELOPMENT row -->
+  <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#F2EEE3">
+    <rect x="24" y="56" width="128" height="42" rx="6" fill="#131826" stroke="#4FA3E3" stroke-width="1.2"/>
+    <text x="88" y="82" text-anchor="middle">CREATIVE STORY</text>
+    <rect x="180" y="56" width="128" height="42" rx="6" fill="#131826" stroke="#4FA3E3" stroke-width="1.2"/>
+    <text x="244" y="82" text-anchor="middle">CONCEPT ART</text>
+    <rect x="336" y="56" width="128" height="42" rx="6" fill="#131826" stroke="#4FA3E3" stroke-width="1.2"/>
+    <text x="400" y="82" text-anchor="middle">STORYBOARD</text>
+    <line x1="152" y1="77" x2="176" y2="77" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+    <line x1="308" y1="77" x2="332" y2="77" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+  </g>
+
+  <!-- PRE-PRODUCTION row -->
+  <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#F2EEE3">
+    <rect x="24" y="194" width="128" height="42" rx="6" fill="#131826" stroke="#2E9B77" stroke-width="1.2"/>
+    <text x="88" y="214" text-anchor="middle">SOUND &amp; MUSIC</text>
+    <text x="88" y="229" text-anchor="middle" font-size="9.5" fill="#7A8699">dialogues · vocals</text>
+    <rect x="180" y="194" width="128" height="42" rx="6" fill="#131826" stroke="#2E9B77" stroke-width="1.2"/>
+    <text x="244" y="214" text-anchor="middle">ANIMATIC</text>
+    <text x="244" y="229" text-anchor="middle" font-size="9.5" fill="#7A8699">story reel hub</text>
+    <rect x="336" y="194" width="128" height="42" rx="6" fill="#131826" stroke="#2E9B77" stroke-width="1.2"/>
+    <text x="400" y="214" text-anchor="middle">MODEL · RIG</text>
+    <text x="400" y="229" text-anchor="middle" font-size="9.5" fill="#7A8699">texture mapping</text>
+    <line x1="400" y1="98" x2="248" y2="190" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+    <line x1="152" y1="215" x2="176" y2="215" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+    <line x1="308" y1="215" x2="332" y2="215" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+  </g>
+
+  <!-- SHOT-PRODUCTION row -->
+  <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#F2EEE3">
+    <rect x="24" y="332" width="128" height="42" rx="6" fill="#131826" stroke="#B08FE0" stroke-width="1.2"/>
+    <text x="88" y="358" text-anchor="middle">ANIMATION</text>
+    <rect x="180" y="332" width="128" height="42" rx="6" fill="#131826" stroke="#B08FE0" stroke-width="1.2"/>
+    <text x="244" y="352" text-anchor="middle">LAYOUT / CINE</text>
+    <text x="244" y="367" text-anchor="middle" font-size="9.5" fill="#7A8699">scene camera</text>
+    <rect x="336" y="332" width="128" height="42" rx="6" fill="#131826" stroke="#B08FE0" stroke-width="1.2"/>
+    <text x="400" y="352" text-anchor="middle">LIGHT · RENDER</text>
+    <text x="400" y="367" text-anchor="middle" font-size="9.5" fill="#7A8699">VFX passes</text>
+    <line x1="400" y1="236" x2="120" y2="328" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+    <line x1="152" y1="353" x2="176" y2="353" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+    <line x1="308" y1="353" x2="332" y2="353" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+  </g>
+
+  <!-- POST row -->
+  <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#F2EEE3">
+    <rect x="24" y="470" width="128" height="42" rx="6" fill="#131826" stroke="#E05545" stroke-width="1.2"/>
+    <text x="88" y="496" text-anchor="middle">COMPOSITING</text>
+    <rect x="180" y="470" width="128" height="42" rx="6" fill="#131826" stroke="#E05545" stroke-width="1.2"/>
+    <text x="244" y="496" text-anchor="middle">EDITING</text>
+    <rect x="336" y="470" width="128" height="42" rx="6" fill="#131826" stroke="#E05545" stroke-width="1.2"/>
+    <text x="400" y="490" text-anchor="middle">TITLES · CREDITS</text>
+    <text x="400" y="505" text-anchor="middle" font-size="9.5" fill="#E8A33D">disclosure lives here</text>
+    <line x1="400" y1="374" x2="120" y2="466" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+    <line x1="152" y1="491" x2="176" y2="491" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+    <line x1="308" y1="491" x2="332" y2="491" stroke="#7A8699" stroke-width="1.8" marker-end="url(#arrP)"/>
+  </g>
+
+  <!-- GATE RAIL -->
+  <line x1="502" y1="24" x2="502" y2="540" stroke="#E8A33D" stroke-width="1.4" stroke-dasharray="3 5"/>
+  <g font-family="IBM Plex Mono, monospace">
+    <!-- Gate 1 -->
+    <rect x="518" y="46" width="262" height="80" rx="6" fill="#131826" stroke="#252E44"/>
+    <circle cx="502" cy="66" r="13" fill="#E8A33D"/>
+    <text x="502" y="71" text-anchor="middle" font-size="13" fill="#0B0E14" font-weight="600">1</text>
+    <text x="532" y="66" font-size="11.5" fill="#F2EEE3">GATE · SCRIPT  <tspan fill="#7A8699" font-size="9.5">~50d dev</tspan></text>
+    <text x="532" y="86" font-size="10" fill="#E8A33D">AI CHECK: declare intended GenAI use</text>
+    <text x="532" y="102" font-size="10" fill="#9AA6BA">to commissioner at kickoff — not after</text>
+    <text x="532" y="116" font-size="10" fill="#9AA6BA">delivery. Open the AI register.</text>
+
+    <!-- Gate 2 -->
+    <rect x="518" y="140" width="262" height="80" rx="6" fill="#131826" stroke="#252E44"/>
+    <circle cx="502" cy="160" r="13" fill="#E8A33D"/>
+    <text x="502" y="165" text-anchor="middle" font-size="13" fill="#0B0E14" font-weight="600">2</text>
+    <text x="532" y="160" font-size="11.5" fill="#F2EEE3">GATE · CHARACTERS &amp; LOCATIONS</text>
+    <text x="532" y="180" font-size="10" fill="#E8A33D">AI CHECK: concept-art provenance.</text>
+    <text x="532" y="196" font-size="10" fill="#9AA6BA">External genAI (Midjourney/Runway) logged;</text>
+    <text x="532" y="210" font-size="10" fill="#9AA6BA">story-critical designs need written OK.</text>
+
+    <!-- Gate 3 -->
+    <rect x="518" y="234" width="262" height="80" rx="6" fill="#131826" stroke="#252E44"/>
+    <circle cx="502" cy="254" r="13" fill="#E8A33D"/>
+    <text x="502" y="259" text-anchor="middle" font-size="13" fill="#0B0E14" font-weight="600">3</text>
+    <text x="532" y="254" font-size="11.5" fill="#F2EEE3">GATE · ANIMATIC + COLOUR  <tspan fill="#7A8699" font-size="9.5">~30d</tspan></text>
+    <text x="532" y="274" font-size="10" fill="#E8A33D">AI CHECK: voice &amp; dialogue tracks.</text>
+    <text x="532" y="290" font-size="10" fill="#9AA6BA">Any synthetic voice → consent on file</text>
+    <text x="532" y="304" font-size="10" fill="#9AA6BA">before it enters the story reel.</text>
+
+    <!-- Gate 4 -->
+    <rect x="518" y="328" width="262" height="80" rx="6" fill="#131826" stroke="#252E44"/>
+    <circle cx="502" cy="348" r="13" fill="#E8A33D"/>
+    <text x="502" y="353" text-anchor="middle" font-size="13" fill="#0B0E14" font-weight="600">4</text>
+    <text x="532" y="348" font-size="11.5" fill="#F2EEE3">GATE · 3D ANIMATION  <tspan fill="#7A8699" font-size="9.5">~30d</tspan></text>
+    <text x="532" y="368" font-size="10" fill="#E8A33D">AI CHECK: shot-level log review.</text>
+    <text x="532" y="384" font-size="10" fill="#9AA6BA">Ember/upscale/cleanup per shot: tool,</text>
+    <text x="532" y="398" font-size="10" fill="#9AA6BA">process, approver — signed by AI Owner.</text>
+
+    <!-- Gate 5 -->
+    <rect x="518" y="422" width="262" height="94" rx="6" fill="#1B2234" stroke="#E8A33D" stroke-width="1.4"/>
+    <circle cx="502" cy="442" r="13" fill="#E8A33D"/>
+    <text x="502" y="447" text-anchor="middle" font-size="13" fill="#0B0E14" font-weight="600">5</text>
+    <text x="532" y="442" font-size="11.5" fill="#F2EEE3">GATE · FINAL PILOT  <tspan fill="#7A8699" font-size="9.5">~50d post</tspan></text>
+    <text x="532" y="462" font-size="10" fill="#E8A33D">AI CHECK: the marking decision.</text>
+    <text x="532" y="478" font-size="10" fill="#9AA6BA">Film → credits disclosure (Art. 50(4)).</text>
+    <text x="532" y="492" font-size="10" fill="#9AA6BA">Trailer/promo → full labelling.</text>
+    <text x="532" y="506" font-size="10" fill="#9AA6BA">Certification pack closes here.</text>
+  </g>
+
+  <!-- Marketing branch warning -->
+  <text x="24" y="545" font-family="IBM Plex Mono, monospace" font-size="10" fill="#E05545" letter-spacing="1">⚠ MARKETING &amp; DISTRIBUTION BRANCHES OFF THE ANIMATIC — IT EXITS THE ARTISTIC CARVE-OUT THE MOMENT IT DOES</text>
+</svg>
+<p class="cap"><b>Five gates, five questions, zero new meetings.</b> Each approval you already run gains one AI line-item, signed by the AI Owner. Gate 5 is where the Reel Two fork gets decided — and note the branch your own process chart makes explicit: marketing &amp; distribution splits off the animatic early, which means the promo pipeline needs its own labelling track from that point, not as an afterthought at delivery.</p>
+</div>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel Three · The Software You Already Run</span><span class="ln"></span></div>
+
+<h2><span class="num">03 · Embedded AI</span>The AI opt-in hiding<br>in your preferences panel.</h2>
+
+<p>Studios ask "should we adopt AI?" while running software that already contains it. Toon Boom's <strong>Ember</strong> suite — built with Bria, Gemini and ElevenLabs — does upscaling, mask removal, resolution raising inside Harmony and Storyboard Pro. Here's the trap worth a full production meeting: <strong>in Harmony 25 the AI features ship disabled by default. The Harmony 24 documentation says enabled by default.</strong> Which version each workstation runs decides whether your "no-AI pipeline" certification is true.</p>
+
+<table class="tools">
+  <thead><tr><th>Tool</th><th>AI Inside</th><th>Status</th><th>What to log</th></tr></thead>
+  <tbody>
+    <tr><td>Toon Boom Harmony 25</td><td>Ember: upscale, mask removal, resolution — Bria / Gemini / ElevenLabs; vendors state no data storage or training on your projects</td><td><span class="pill opt">Opt-in · Licensed</span></td><td>Which seats hold Ember licences; preference state per workstation</td></tr>
+    <tr><td>Toon Boom Harmony 24</td><td>Same Ember suite</td><td><span class="pill def">Docs: on by default</span></td><td>Version audit across every seat — this is the certification risk</td></tr>
+    <tr><td>Storyboard Pro 25</td><td>Ember (optional addition)</td><td><span class="pill opt">Opt-in</span></td><td>Per-project enable/disable decision, recorded</td></tr>
+    <tr><td>Adobe suite</td><td>Firefly-class generative fill, audio enhance, rotoscoping aids</td><td><span class="pill def">Feature-level, evolving</span></td><td>Which features are permitted, per project tier</td></tr>
+    <tr><td>Concept / previz tools</td><td>Midjourney, Runway &amp; similar — external generative platforms</td><td><span class="pill ext">External · Highest scrutiny</span></td><td>Prompt logs, licence terms, whether output ever reaches final frames</td></tr>
+    <tr><td>Toon Boom Producer / Flow (ShotGrid) / ftrack</td><td>Production tracking — none of the standard trackers ships a native "AI used on this shot" field</td><td><span class="pill gap">The gap</span></td><td>Add custom fields: tool, version, scene, approver — this is your audit trail</td></tr>
+  </tbody>
+</table>
+
+<p><strong>The gap row is the finding.</strong> Netflix's framework expects partners to record which scenes used AI, what processing occurred, which tool, and who approved — but the industry-standard trackers don't carry that field out of the box. The studio that configures shot-level AI logging into Producer or Flow today owns an asset every commissioner will soon demand.</p>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel Four · The AI Owner</span><span class="ln"></span></div>
+
+<h2><span class="num">04 · One Name on the Slate</span>What the "AI Owner"<br>actually does all day.</h2>
+
+<p>Both the EU compliance model and Netflix's escalation logic assume someone answers for AI use — not a committee. In a studio, the role is closer to a <strong>line producer for provenance</strong> than an IT function:</p>
+
+<div class="owner">
+  <div class="o"><h5>Keeps the inventory</h5><p>Every tool with AI capability, per version, per seat — including what's dormant in preferences. Updated at each software upgrade, because upgrades are where AI arrives silently.</p></div>
+  <div class="o"><h5>Owns the shot log</h5><p>Scene-level record: which shots touched AI, which tool, what kind of processing, who approved the result. The exact granularity Netflix's framework describes.</p></div>
+  <div class="o"><h5>Gates the escalations</h5><p>Decides what's low-risk ideation versus what needs commissioner sign-off — final-frame generation, any talent likeness, any personal data, any third-party IP.</p></div>
+  <div class="o"><h5>Signs the warranties</h5><p>When the contract asks the studio to certify its AI use, this person's records are what makes the signature honest — and what the E&amp;O insurer will ask to see.</p></div>
+</div>
+
+<p>For a 20-person studio this is a hat, not a hire — but a <strong>named</strong> hat, with the register as a standing deliverable. Their signature appears exactly five times per production: once at each gate in the 02b chart. The moment it's "everyone's job," it's no one's evidence.</p>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel Five · The Netflix Clause Watchlist</span><span class="ln"></span></div>
+
+<h2><span class="num">05 · Read Before Signing</span>Six clauses that should<br>raise eyebrows in Riyadh.</h2>
+
+<p>Netflix's Saudi footprint is deep — an exclusive multi-year partnership with <strong>Myrkott</strong> (the Masameer studio, Netflix's largest Arab-animation investment at signing, with first-look rights on upcoming projects) and an eight-film slate with <strong>Telfaz11</strong>. Netflix's published GenAI framework already binds production partners <em>and their vendors</em>: disclose intended AI use to your Netflix contact, written approval for anything touching final deliverables, talent likeness, personal data or third-party IP, and custom AI workflows must pass the guidelines at every pipeline step. International commissioning for the region typically runs through EU-domiciled entities — which means an EU counterparty, EU-anchored obligations, and contract language built for the Act. When the next long-form agreement lands, these are the clauses to slow down on:</p>
+
+<div class="clauses">
+  <details class="cl">
+    <summary><span class="t">The blanket AI-compliance warranty</span><span class="tag">Eyebrow 1</span></summary>
+    <div class="bd">
+      <p>"Producer warrants all deliverables comply with all applicable AI transparency laws, including Regulation (EU) 2024/1689." One sentence transfers the entire EU compliance burden — including rules still being clarified through guidelines and codes of practice — onto the studio.</p>
+      <div class="ask"><b>Push for:</b> a mutual-cooperation clause instead — studio warrants accuracy of its AI-usage disclosures; platform owns end-user labelling on its service. You can honestly warrant your records. You cannot honestly warrant Brussels.</div>
+    </div>
+  </details>
+
+  <details class="cl">
+    <summary><span class="t">Uncapped AI indemnities</span><span class="tag">Eyebrow 2</span></summary>
+    <div class="bd">
+      <p>Indemnify the platform for "any claim arising from the use of artificial intelligence in the production" — unlimited, surviving delivery, covering training-data claims against tools the studio doesn't control (a model vendor's dataset dispute becomes your liability).</p>
+      <div class="ask"><b>Push for:</b> caps tied to the production fee; carve-outs for claims arising from the tool vendor's training data; indemnity limited to breaches of your own disclosed AI-use schedule.</div>
+    </div>
+  </details>
+
+  <details class="cl">
+    <summary><span class="t">Chain-of-title on AI-assisted frames</span><span class="tag">Eyebrow 3</span></summary>
+    <div class="bd">
+      <p>Standard chain-of-title asks you to warrant you own everything. Purely AI-generated elements have contested copyright status in most jurisdictions — you may be warranting ownership of frames no law clearly lets you own. Netflix's own principles require that outputs don't replicate identifiable copyrighted material; the contract version of that idea can be far broader.</p>
+      <div class="ask"><b>Push for:</b> a schedule distinguishing human-authored, AI-assisted (human-directed and modified), and AI-generated assets — with warranty language calibrated per category, not one blanket claim.</div>
+    </div>
+  </details>
+
+  <details class="cl">
+    <summary><span class="t">Audit rights into your pipeline</span><span class="tag">Eyebrow 4</span></summary>
+    <div class="bd">
+      <p>The platform can audit your AI usage records "on reasonable notice." Fair in principle — Netflix's framework already expects scene-level logs. The eyebrow: scope. Unbounded audit language reaches your other clients' confidential projects sitting in the same tracker and the same cloud.</p>
+      <div class="ask"><b>Push for:</b> audit scope limited to the commissioned production's records; your shot-level AI log defined as the audit artefact — which is another reason to build it properly.</div>
+    </div>
+  </details>
+
+  <details class="cl">
+    <summary><span class="t">Synthetic voice &amp; performance consent flow-down</span><span class="tag">Eyebrow 5</span></summary>
+    <div class="bd">
+      <p>Netflix requires consent for generating or materially altering performances — even minor changes like visual ADR. For animation, dubbing and Arabic-localisation workflows using voice AI (ElevenLabs sits inside Ember's stack), the studio must hold documented consent from every voice artist whose sound feeds any synthetic process — and flow that duty to every dubbing vendor.</p>
+      <div class="ask"><b>Push for:</b> a consent-register obligation you can actually operate, and template consent language in your standard talent agreements <em>now</em>, before the project that needs it retroactively.</div>
+    </div>
+  </details>
+
+  <details class="cl">
+    <summary><span class="t">Tool restrictions you can't see into</span><span class="tag">Eyebrow 6</span></summary>
+    <div class="bd">
+      <p>"Only enterprise-secured AI tools that do not store, reuse, or train on production data" — Netflix's stated principle, reasonable on its face. But the studio is being asked to warrant the internal data practices of third-party software vendors. Toon Boom publishes a no-training statement for Ember; many tools don't.</p>
+      <div class="ask"><b>Push for:</b> compliance defined as using tools from an agreed schedule (updated by notice), with vendor attestations accepted as sufficient evidence — so you warrant diligence, not other companies' server behaviour.</div>
+    </div>
+  </details>
+</div>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel Six · The Relationship Cascade</span><span class="ln"></span></div>
+
+<h2><span class="num">06 · EU ↔ KSA</span>Disclosure flows downhill.<br>So does liability.</h2>
+
+<div class="pipewrap">
+<svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cascade of AI disclosure obligations from EU regulator to platform to studio to vendors">
+  <defs>
+    <marker id="arrD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8A33D"/>
+    </marker>
+  </defs>
+  <g font-family="IBM Plex Mono, monospace">
+    <rect x="20" y="30" width="170" height="62" rx="7" fill="#1B2234" stroke="#4FA3E3" stroke-width="1.4"/>
+    <text x="105" y="56" text-anchor="middle" font-size="12.5" fill="#F2EEE3">EU REGULATOR</text>
+    <text x="105" y="74" text-anchor="middle" font-size="10" fill="#7A8699">Art. 50 + fines</text>
+
+    <rect x="230" y="30" width="170" height="62" rx="7" fill="#1B2234" stroke="#252E44"/>
+    <text x="315" y="50" text-anchor="middle" font-size="12.5" fill="#F2EEE3">PLATFORM</text>
+    <text x="315" y="67" text-anchor="middle" font-size="10" fill="#7A8699">EU-domiciled entity</text>
+    <text x="315" y="82" text-anchor="middle" font-size="10" fill="#E8A33D">GenAI guidelines</text>
+
+    <rect x="440" y="30" width="170" height="62" rx="7" fill="#E8A33D"/>
+    <text x="525" y="56" text-anchor="middle" font-size="12.5" fill="#0B0E14" font-weight="600">SAUDI STUDIO</text>
+    <text x="525" y="74" text-anchor="middle" font-size="10" fill="#0B0E14">warranties + logs</text>
+
+    <rect x="650" y="12" width="130" height="44" rx="6" fill="#131826" stroke="#252E44"/>
+    <text x="715" y="38" text-anchor="middle" font-size="10.5" fill="#C8D0DE">DUB / AUDIO VENDOR</text>
+    <rect x="650" y="66" width="130" height="44" rx="6" fill="#131826" stroke="#252E44"/>
+    <text x="715" y="92" text-anchor="middle" font-size="10.5" fill="#C8D0DE">VFX / COMP VENDOR</text>
+    <rect x="650" y="120" width="130" height="44" rx="6" fill="#131826" stroke="#252E44"/>
+    <text x="715" y="146" text-anchor="middle" font-size="10.5" fill="#C8D0DE">FREELANCE ARTISTS</text>
+
+    <line x1="190" y1="61" x2="226" y2="61" stroke="#E8A33D" stroke-width="2.2" marker-end="url(#arrD)"/>
+    <line x1="400" y1="61" x2="436" y2="61" stroke="#E8A33D" stroke-width="2.2" marker-end="url(#arrD)"/>
+    <line x1="610" y1="48" x2="646" y2="34" stroke="#E8A33D" stroke-width="1.8" marker-end="url(#arrD)"/>
+    <line x1="610" y1="61" x2="646" y2="88" stroke="#E8A33D" stroke-width="1.8" marker-end="url(#arrD)"/>
+    <line x1="610" y1="74" x2="646" y2="140" stroke="#E8A33D" stroke-width="1.8" marker-end="url(#arrD)"/>
+
+    <text x="30" y="150" font-size="11" fill="#7A8699" letter-spacing="1">EACH ARROW = A CONTRACT.</text>
+    <text x="30" y="170" font-size="11" fill="#7A8699" letter-spacing="1">EACH CONTRACT NOW CARRIES AI DISCLOSURE TERMS.</text>
+    <text x="30" y="204" font-size="11" fill="#E8A33D" letter-spacing="1">NETFLIX'S RULES EXPLICITLY BIND PARTNER VENDORS —</text>
+    <text x="30" y="224" font-size="11" fill="#E8A33D" letter-spacing="1">THE STUDIO IN THE MIDDLE CARRIES THE FLOW-DOWN.</text>
+  </g>
+</svg>
+<p class="cap"><b>The middle position is the exposed one.</b> The studio absorbs obligations from above and must push them below — to dubbing houses, outsourced comp, freelancers on personal Midjourney accounts. A freelancer's undisclosed AI use becomes the studio's breached warranty. Vendor onboarding needs an AI-use declaration the way it already needs an NDA.</p>
+</div>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel Seven · Build It Secure From Day One</span><span class="ln"></span></div>
+
+<h2><span class="num">07 · The Micro-Studio Stack</span>Small studio. Sovereign data.<br>Provable pipeline.</h2>
+
+<p>For a startup studio in Riyadh, the security question and the disclosure question are the same question: <strong>a well-architected asset database is your audit trail</strong>. And yes — generative AI use should itself be bound by the disclosure discipline even when it's deployed to <em>protect</em> the database: an AI tool watching your infrastructure is still an AI system on your inventory. The Saudi layer adds real constraints: PDPL on personal data and cross-border transfers, CST's cloud framework classifying data and providers, NCA controls beneath — with in-Kingdom regions (AWS Riyadh, Oracle Jeddah) satisfying residency where it's required. Build in this order:</p>
+
+<div class="stack">
+  <div class="lay"><h5>In-Kingdom cloud region, classified from day one</h5><p>Host production data in a local region; classify what you hold (personal data of cast/crew vs. project assets vs. anything government-linked — the last changes everything under CST/NCA rules). Startups lose audits on documentation, not technology.</p></div>
+  <div class="lay"><h5>Isolation + role-based access — the carve-out conditions</h5><p>Cloud isolation and RBAC aren't just security hygiene; they're literally the EU's B2B carve-out conditions for unmarked intermediate content. Your security architecture is your regulatory posture.</p></div>
+  <div class="lay"><h5>The AI inventory register</h5><p>Every tool, version, AI capability, default state, vendor's data/training terms. One page at first. Reviewed at every software update — because updates are where AI features arrive unannounced.</p></div>
+  <div class="lay"><h5>Shot-level provenance in the tracker</h5><p>Custom fields in Producer / Flow / ftrack: AI-used (y/n), tool, process type, approver. Thirty minutes of configuration that becomes your Netflix log, your EU evidence, and your E&amp;O submission.</p></div>
+  <div class="lay"><h5>PDPL mapping for people-data in AI flows</h5><p>Voice recordings feeding dubbing tools, cast images in reference libraries, crew data in schedulers — each is personal data in an AI process. Map it, minimise it, document transfer grounds before any tool sends it abroad.</p></div>
+  <div class="lay"><h5>Consent templates before you need them</h5><p>Voice and likeness consent language in standard talent agreements from the first contract — retrofitting consent across a delivered series is the expensive version.</p></div>
+</div>
+
+<div class="slate"><span class="ln"></span><span class="sl">Reel Eight · The Questions Nobody Is Asking Yet</span><span class="ln"></span></div>
+
+<h2><span class="num">08 · Open Questions</span>Eight things to raise<br>before your next production.</h2>
+
+<div class="qs">
+  <div class="q"><div class="n">Q1 · Insurance</div><p>Will E&amp;O insurers exclude AI-generated assets without provenance records — and will premiums start pricing the quality of your AI log?</p></div>
+  <div class="q"><div class="n">Q2 · Festivals &amp; Broadcasters</div><p>Festival entry forms and broadcaster delivery specs are adding AI declarations. Who at the studio answers them, and against which record?</p></div>
+  <div class="q"><div class="n">Q3 · Arabic Synthetic Voice</div><p>Voice AI makes Arabic dubbing dramatically cheaper. Whose voice trained the model, who consented, and who owns the resulting performance?</p></div>
+  <div class="q"><div class="n">Q4 · The KSA Copyright Paradox</div><p>Saudi's new copyright law eases the use of works for AI development while the EU tightens output disclosure. Can a studio train on its own back-catalogue and still warrant clean chain-of-title abroad?</p></div>
+  <div class="q"><div class="n">Q5 · Silent Updates</div><p>When a tool update enables AI by default mid-production (the Harmony 24/25 lesson), does your change-management even notice — and who re-certifies the pipeline?</p></div>
+  <div class="q"><div class="n">Q6 · C2PA in Delivery Specs</div><p>Content Credentials (cryptographic provenance) are moving from press photography toward streaming delivery requirements. Should your renders carry them before you're asked?</p></div>
+  <div class="q"><div class="n">Q7 · Who Audits the AI Owner?</div><p>A register nobody verifies is a liability with a nice cover page. Internal audit — or the finance function — needs the AI log in its annual scope.</p></div>
+  <div class="q"><div class="n">Q8 · Government-Linked Work</div><p>Commissions from giga-projects and public entities pull NCA critical-systems controls and stricter residency into your pipeline. Does your cloud architecture survive that client?</p></div>
+</div>
+
+<blockquote>
+  Animation studios have tracked every frame, every cel, every retake since the industry began. Provenance isn't a new discipline here — it's the oldest one. The only thing new is what must be written on the slate.
+  <cite>The through-line</cite>
+</blockquote>
+
+<div class="note" id="disclosure-f">
+  <b>◆ AI Transparency Disclosure.</b> This brief was drafted with a large language model under named human editorial oversight — research direction, source verification, framing and approval by the author, who takes full editorial responsibility. Text and code-drawn diagrams only; no synthetic media. <b>Currency &amp; accuracy notes:</b> EU Article 50 final guidelines and the Code of Practice were published in 2026 and continue to evolve; Netflix's partner guidance is periodically updated; Saudi frameworks (SDAIA policies, PDPL instruments) are actively developing. Sirb Artistics is named in the market as a Saudi creative studio, but its specific platform agreements could not be verified from available sources and no claims are made about them. Nothing here is legal advice — production agreements of this kind warrant review by counsel qualified in the relevant jurisdictions.
+</div>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="src">
+      <b>Sources &amp; Further Reading</b>
+      European Commission — Final Guidelines on AI Act Article 50 transparency obligations; Code of Practice on Transparency of AI-Generated Content (2026)<br>
+      Article 50, Regulation (EU) 2024/1689 — deepfake definition, artistic-works regime, applicability to output used in the Union<br>
+      Bird &amp; Bird — analyses of the final Article 50 Guidelines and draft Transparency Code of Practice<br>
+      Netflix Partner Help Center — "Using Generative AI in Content Production" (guiding principles, approval triggers, vendor scope)<br>
+      Screen Daily / TV Tech / CineD — reporting on Netflix GenAI production guidelines (Aug–Sep 2025)<br>
+      Cartoon Brew / Arab News / Screen Daily — Netflix–Myrkott exclusive partnership (2020; first-look rights) and Netflix–Telfaz11 eight-film deal (Nov 2020)<br>
+      Toon Boom — Harmony 24/25 &amp; Storyboard Pro 25 documentation: Ember AI features, provider partnerships (Bria, Gemini, ElevenLabs), default states, no-training statements; Producer tracking suite<br>
+      CST — Cloud Computing Regulatory Framework v3; NCA — ECC / Cloud Computing Cybersecurity Controls; Saudi PDPL and transfer rules; Morgan Lewis &amp; market analyses of Saudi cloud compliance (2026)<br>
+      SDAIA — Deepfakes Guidelines; Generative AI Guidelines; draft Responsible AI Policy (consultation closed May 2026)
+    </div>
+    <div class="sig">
+      <span class="nm">Syed Tanveer Ali <span style="font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.08em;">FCCA, CMA</span></span>
+      <span class="rl">Finance &amp; Accounting Expert · Odoo Functional Consultant</span>
+    </div>
+    <div class="dl">◆ AI-ASSISTED CONTENT — Drafted with a large language model; researched, verified, edited and approved under human editorial oversight. <a href="#disclosure-f" style="color:var(--projector);">Full disclosure ↑</a></div>
+  </div>
+</footer>
+
+<script>
+function go(id){
+  document.querySelectorAll('.q-step').forEach(function(s){s.classList.remove('on');});
+  document.getElementById(id).classList.add('on');
+}
+</script>
+</body>
+</html>
