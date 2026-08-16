@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="light"><head>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syed Tanveer Ali — Accounting, Bookkeeping &amp; Odoo ERP Consulting</title>
 <meta name="description" content="Accounting, bookkeeping, and Odoo ERP consulting &amp; implementation by Syed Tanveer Ali. Books that balance, systems that scale.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=El+Messiri:wght@500;600;700&amp;family=Cairo:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&family=El+Messiri:wght@500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============ TOKENS ============ */
 :root{
@@ -431,48 +432,43 @@ html[data-theme="dark"] .why-section{background:linear-gradient(155deg, #0C1C18 
 }
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);outline:none;}
 .field textarea{resize:vertical;min-height:90px;}
-.form-foot{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:8px;flex-wrap:wrap;}
+.form-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:8px;flex-wrap:wrap;}
 .form-note{font-size:12px;color:var(--ink-faint);max-width:280px;}
 
-/* Form status messages — sits inline to the left of the submit button */
+/* Form status messages */
 .form-status {
-  flex:1 1 auto;
-  min-width:220px;
-  margin:0;
-  padding: 11px 16px;
+  margin-top: 16px;
+  padding: 14px 18px;
   border-radius: 12px;
   display: none;
-  align-items: flex-start;
-  gap: 9px;
   font-weight: 500;
-  font-size: 13.5px;
-  line-height: 1.45;
+  font-size: 14px;
   transition: all 0.3s ease;
 }
 .form-status.success {
   display: flex;
+  align-items: flex-start;
+  gap: 10px;
   background: var(--accent-soft);
   color: var(--accent-2);
   border: 1px solid var(--accent);
 }
 .form-status.success .status-icon{
   flex-shrink:0;
-  width:18px;height:18px;
+  width:20px;height:20px;
   display:flex;align-items:center;justify-content:center;
   margin-top:1px;
 }
-.form-status.success .status-icon svg{width:15px;height:15px;color:var(--accent-2);}
-.form-status.success .status-text{font-weight:600;}
+.form-status.success .status-icon svg{width:16px;height:16px;color:var(--accent-2);}
+.form-status.success .status-text{line-height:1.5;font-weight:600;}
 .form-status.error {
-  display: flex;
-  align-items: center;
+  display: block;
   background: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
 .form-status.loading {
-  display: flex;
-  align-items: center;
+  display: block;
   background: #d1ecf1;
   color: #0c5460;
   border: 1px solid #bee5eb;
@@ -625,27 +621,27 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
       <a href="#why" data-i18n="nav.why">Why Odoo</a>
       <a href="#results" data-i18n="nav.results">Results</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
-    <a href="https://b3dl4m-7.github.io/sta/AI_Disclosure_Statement.html">Ai Disclosure</a>
+    </nav>
     <div class="nav-actions">
       <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke-linecap="round"></path></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" stroke-linejoin="round"></path></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" stroke-linejoin="round"/></svg>
       </button>
       <button class="icon-btn lang-btn" id="langToggle" aria-label="Switch language" title="Switch language">
         <span id="langLabel">عربي</span>
       </button>
       <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Book a Consultation</a>
       <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
-  </nav></div>
+  </div>
 </header>
 
 <!-- ============ HERO ============ -->
 <main id="top">
 <section class="hero wrap">
-  <div class="hero-inner reveal is-in" style="--i: 0;">
+  <div class="hero-inner reveal is-in">
     <span class="eyebrow" data-i18n="hero.eyebrow">Accounting · Bookkeeping · Odoo ERP</span>
     <h1 data-i18n-html="hero.title">Books That Balance. <em>Systems</em> That Scale.</h1>
     <p class="lead" data-i18n="hero.lead">Syed Tanveer Ali helps growing businesses across the GCC close their books with confidence and run their operations on Odoo — configured, migrated, and supported end to end.</p>
@@ -655,11 +651,11 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
     </div>
   </div>
 
-  <div class="tape-wrap reveal is-in" style="transition-delay: 0.15s; --i: 1;">
-    <div class="tape glass" id="ledgerTape" style="transition: opacity .25s var(--ease-out); opacity: 1;"><span><b>GL Entry</b>#4471</span><span><b>Bank Feed</b>Matched ✓</span><span><b>VAT Return</b>Filed</span><span><b>Purchase Order</b>#2290</span><span><b>Inventory</b>Updated</span><span><b>Payroll</b>Approved</span><span><b>Invoice</b>ZATCA ✓</span><span><b>Reconciliation</b>Complete</span><span><b>P&amp;L</b>Generated</span><span><b>GL Entry</b>#4471</span><span><b>Bank Feed</b>Matched ✓</span><span><b>VAT Return</b>Filed</span><span><b>Purchase Order</b>#2290</span><span><b>Inventory</b>Updated</span><span><b>Payroll</b>Approved</span><span><b>Invoice</b>ZATCA ✓</span><span><b>Reconciliation</b>Complete</span><span><b>P&amp;L</b>Generated</span></div>
+  <div class="tape-wrap reveal" style="transition-delay:.15s">
+    <div class="tape glass" id="ledgerTape"></div>
   </div>
 
-  <div class="hero-visual reveal is-in" style="transition-delay: 0.25s; --i: 2;">
+  <div class="hero-visual reveal" style="transition-delay:.25s">
     <div class="dash-card glass glass-strong">
       <div class="dash-top">
         <div class="dots"><span></span><span></span><span></span></div>
@@ -683,11 +679,11 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
     </div>
   </div>
 
-  <div class="stats-strip reveal reveal-stagger is-in" style="transition-delay: 0.35s; --i: 3;">
+  <div class="stats-strip reveal reveal-stagger" style="transition-delay:.35s">
     <div class="stats-grid">
-      <div class="stat-cell"><div class="num"><span data-count="8">8</span>+</div><div class="cap" data-i18n="hero.st1">Years in practice</div></div>
-      <div class="stat-cell"><div class="num"><span data-count="120">120</span>+</div><div class="cap" data-i18n="hero.st2">Clients advised</div></div>
-      <div class="stat-cell"><div class="num"><span data-count="40">40</span>+</div><div class="cap" data-i18n="hero.st3">Odoo go-lives</div></div>
+      <div class="stat-cell"><div class="num"><span data-count="8">0</span>+</div><div class="cap" data-i18n="hero.st1">Years in practice</div></div>
+      <div class="stat-cell"><div class="num"><span data-count="120">0</span>+</div><div class="cap" data-i18n="hero.st2">Clients advised</div></div>
+      <div class="stat-cell"><div class="num"><span data-count="40">0</span>+</div><div class="cap" data-i18n="hero.st3">Odoo go-lives</div></div>
       <div class="stat-cell"><div class="num" data-i18n="hero.st4num">ZATCA</div><div class="cap" data-i18n="hero.st4">E-invoicing ready</div></div>
     </div>
   </div>
@@ -695,7 +691,7 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 
 <!-- ============ SERVICES & PROCESS ============ -->
 <section class="section wrap" id="services">
-  <div class="section-head reveal is-in" style="--i: 4;">
+  <div class="section-head reveal">
     <span class="eyebrow" data-i18n="services.eyebrow">What I Do</span>
     <h2 data-i18n="services.title">One partner for your books and your systems</h2>
     <p data-i18n="services.lead">From the first journal entry to a fully configured ERP, every engagement is built around clean numbers and processes your team can actually run.</p>
@@ -706,51 +702,51 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 
       <div class="service-card glass">
         <span class="service-num">01</span>
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h4"></path></svg></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></div>
         <span class="tag" data-i18n="services.s1.tag">Bookkeeping</span>
         <h3 data-i18n="services.s1.title">Accurate books, every month</h3>
         <p data-i18n="services.s1.desc">Day-to-day recording and reconciliation, kept current so you always know where the business stands.</p>
         <ul class="service-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s1.l1">Transaction recording &amp; categorisation</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s1.l2">Bank &amp; cash reconciliation</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s1.l3">Accounts payable &amp; receivable</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s1.l4">Payroll support &amp; month-end close</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s1.l1">Transaction recording &amp; categorisation</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s1.l2">Bank &amp; cash reconciliation</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s1.l3">Accounts payable &amp; receivable</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s1.l4">Payroll support &amp; month-end close</span></li>
         </ul>
       </div>
 
       <div class="service-card glass">
         <span class="service-num">02</span>
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
         <span class="tag" data-i18n="services.s2.tag">Accounting &amp; Reporting</span>
         <h3 data-i18n="services.s2.title">Numbers you can act on</h3>
         <p data-i18n="services.s2.desc">Statements and reports built for decisions, not just compliance — with GCC tax requirements handled.</p>
         <ul class="service-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s2.l1">Financial statement preparation</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s2.l2">VAT &amp; ZATCA e-invoicing compliance</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s2.l3">Management reporting &amp; KPIs</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s2.l4">Budgeting &amp; cash-flow forecasting</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s2.l1">Financial statement preparation</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s2.l2">VAT &amp; ZATCA e-invoicing compliance</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s2.l3">Management reporting &amp; KPIs</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s2.l4">Budgeting &amp; cash-flow forecasting</span></li>
         </ul>
       </div>
 
       <div class="service-card glass">
         <span class="service-num">03</span>
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.96 19.3a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.7 8.96a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9.1A1.7 1.7 0 0 0 10.14 3H10.1a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9.1c.16.6.62 1.06 1.56 1.14H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.06Z"></path></svg></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.96 19.3a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.7 8.96a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9.1A1.7 1.7 0 0 0 10.14 3H10.1a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9.1c.16.6.62 1.06 1.56 1.14H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.06Z"/></svg></div>
         <span class="tag" data-i18n="services.s3.tag">Odoo ERP</span>
         <h3 data-i18n="services.s3.title">One system, every department</h3>
         <p data-i18n="services.s3.desc">End-to-end Odoo consulting — from process mapping to configuration, migration, and go-live support.</p>
         <ul class="service-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s3.l1">Requirements &amp; process mapping</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s3.l2">Module configuration &amp; customisation</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s3.l3">Data migration &amp; integrations</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="services.s3.l4">Team training &amp; go-live support</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s3.l1">Requirements &amp; process mapping</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s3.l2">Module configuration &amp; customisation</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s3.l3">Data migration &amp; integrations</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="services.s3.l4">Team training &amp; go-live support</span></li>
         </ul>
       </div>
 
     </div>
 
-    <div class="process-inline reveal is-in" style="--i: 5;">
+    <div class="process-inline reveal">
       <div class="process-inline-head">
-        <span class="eyebrow" data-i18n="process.eyebrow">How We Work</span>
+        <span class="eyebrow" data-i18n="process.eyebrow">How It Works</span>
         <p class="tab-intro" data-i18n="process.lead">A structured path whether you need clean books this month or a full Odoo rollout this quarter.</p>
       </div>
       <div class="process-wrap">
@@ -769,26 +765,26 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 
 <!-- ============ WHY ODOO ============ -->
 <section class="section wrap" id="why">
-  <div class="why-section reveal is-in" style="--i: 6;">
+  <div class="why-section reveal">
     <div class="why-grid">
       <div class="why-copy">
         <span class="eyebrow" data-i18n="why.eyebrow">Why Odoo</span>
         <h2 data-i18n="why.title">Built for finance leaders who also run the business</h2>
         <p data-i18n="why.lead">Odoo brings accounting, sales, inventory, and operations onto one platform. I configure it around how your business actually works — not the other way around.</p>
         <ul class="why-points">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="why.p1">Certified Odoo functional consultant</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="why.p2">Accounting-first implementations, not just software installs</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="why.p3">Deep familiarity with KSA &amp; GCC compliance requirements</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="why.p4">One point of contact from kickoff to ongoing support</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="why.p1">Certified Odoo functional consultant</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="why.p2">Accounting-first implementations, not just software installs</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="why.p3">Deep familiarity with KSA &amp; GCC compliance requirements</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="why.p4">One point of contact from kickoff to ongoing support</span></li>
         </ul>
       </div>
       <div class="module-grid">
-        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h4"></path></svg><span data-i18n="why.m1">Accounting</span></div>
-        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 4h10l-1.5 8h-11L5 5"></path><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle></svg><span data-i18n="why.m2">Invoicing</span></div>
-        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l9-4 9 4-9 4-9-4Z"></path><path d="M3 7v10l9 4 9-4V7"></path><path d="M12 11v10"></path></svg><span data-i18n="why.m3">Inventory</span></div>
-        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg><span data-i18n="why.m4">Sales</span></div>
-        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><circle cx="17.5" cy="9" r="2.4"></circle><path d="M15.8 13a5 5 0 0 1 5.7 5"></path></svg><span data-i18n="why.m5">CRM &amp; HR</span></div>
-        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 9h18M8 4v14"></path></svg><span data-i18n="why.m6">Purchase</span></div>
+        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg><span data-i18n="why.m1">Accounting</span></div>
+        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 4h10l-1.5 8h-11L5 5"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span data-i18n="why.m2">Invoicing</span></div>
+        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg><span data-i18n="why.m3">Inventory</span></div>
+        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg><span data-i18n="why.m4">Sales</span></div>
+        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.8 13a5 5 0 0 1 5.7 5"/></svg><span data-i18n="why.m5">CRM &amp; HR</span></div>
+        <div class="module-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 4v14"/></svg><span data-i18n="why.m6">Purchase</span></div>
       </div>
     </div>
   </div>
@@ -796,23 +792,23 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 
 <!-- ============ TESTIMONIALS ============ -->
 <section class="section wrap" id="results">
-  <div class="section-head reveal is-in" style="--i: 7;">
+  <div class="section-head reveal">
     <span class="eyebrow" data-i18n="testi.eyebrow">Real Outcomes</span>
     <h2 data-i18n="testi.title">What clients notice first</h2>
     <p data-i18n="testi.lead">Faster closes, cleaner audits, and one system their whole team actually uses.</p>
   </div>
   <div class="test-grid">
-    <div class="test-card glass reveal is-in" style="transition-delay: 0.05s; --i: 0;">
+    <div class="test-card glass reveal" style="transition-delay:.05s">
       <span class="test-result" data-i18n="testi.t1.result">6 days faster close</span>
       <p class="test-quote" data-i18n="testi.t1.quote">“Our month-end used to take two weeks. After the Odoo migration and cleanup, we close in under a week — with numbers we trust.”</p>
       <div class="test-who"><div class="avatar">RM</div><div><div class="name" data-i18n="testi.t1.name">Retail Operations Director</div><div class="role" data-i18n="testi.t1.role">Multi-branch retail group, Riyadh</div></div></div>
     </div>
-    <div class="test-card glass reveal is-in" style="transition-delay: 0.15s; --i: 1;">
+    <div class="test-card glass reveal" style="transition-delay:.15s">
       <span class="test-result" data-i18n="testi.t2.result">Zero downtime go-live</span>
       <p class="test-quote" data-i18n="testi.t2.quote">“The migration from our old system was the smoothest ERP transition we've been through. Data was clean and the team was trained before day one.”</p>
       <div class="test-who"><div class="avatar">KF</div><div><div class="name" data-i18n="testi.t2.name">Finance Manager</div><div class="role" data-i18n="testi.t2.role">Light manufacturing, Jeddah</div></div></div>
     </div>
-    <div class="test-card glass reveal is-in" style="transition-delay: 0.25s; --i: 2;">
+    <div class="test-card glass reveal" style="transition-delay:.25s">
       <span class="test-result" data-i18n="testi.t3.result">Fully ZATCA compliant</span>
       <p class="test-quote" data-i18n="testi.t3.quote">“VAT and e-invoicing used to keep me up at night. Now it's handled inside Odoo automatically, and I finally trust our reports.”</p>
       <div class="test-who"><div class="avatar">AH</div><div><div class="name" data-i18n="testi.t3.name">Founder</div><div class="role" data-i18n="testi.t3.role">F&amp;B group, Dammam</div></div></div>
@@ -822,11 +818,11 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 
 <!-- ============ INDUSTRIES ============ -->
 <section class="section wrap" style="padding-block:0 90px;">
-  <div class="section-head reveal is-in" style="margin-bottom: 26px; --i: 3;">
+  <div class="section-head reveal" style="margin-bottom:26px;">
     <span class="eyebrow" data-i18n="ind.eyebrow">Who I Work With</span>
     <h2 data-i18n="ind.title">Industries served</h2>
   </div>
-  <div class="chips reveal is-in" style="--i: 4;">
+  <div class="chips reveal">
     <span class="chip" data-i18n="ind.i1">Retail &amp; E-commerce</span>
     <span class="chip" data-i18n="ind.i2">Manufacturing</span>
     <span class="chip" data-i18n="ind.i3">Trading &amp; Distribution</span>
@@ -840,27 +836,27 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
 
 <!-- ============ CONTACT WITH WEB3FORMS ============ -->
 <section class="section wrap" id="contact" style="padding-top:0;">
-  <div class="section-head reveal is-in" style="--i: 5;">
+  <div class="section-head reveal">
     <span class="eyebrow" data-i18n="contact.eyebrow">Get In Touch</span>
     <h2 data-i18n="contact.title">Let's talk about your books</h2>
     <p data-i18n="contact.lead">Tell me a bit about your business and I'll get back to you within one business day.</p>
   </div>
 
-  <div class="contact-card glass reveal is-in" style="--i: 6;">
+  <div class="contact-card glass reveal">
     <div class="contact-side">
       <div>
         <h3 data-i18n="contact.sideTitle">Syed Tanveer Ali</h3>
         <p data-i18n="contact.sideDesc">Accounting, bookkeeping, and Odoo ERP consulting for growing businesses across the GCC.</p>
         <div class="contact-info">
-          <a href="mailto:hello@syedalitanveer.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg>hello@syedalitanveer.com</a>
-          <a href="tel:+966500000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2c-9 0-16-7-16-16a2 2 0 0 1 2-2Z"></path></svg>+966 50 000 0000</a>
-          <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4.5 8-11a8 8 0 1 0-16 0c0 6.5 8 11 8 11Z"></path><circle cx="12" cy="11" r="2.5"></circle></svg><span data-i18n="contact.location">Riyadh, Saudi Arabia</span></a>
+          <a href="mailto:hello@syedalitanveer.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>hello@syedalitanveer.com</a>
+          <a href="tel:+966500000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2c-9 0-16-7-16-16a2 2 0 0 1 2-2Z"/></svg>+966 50 000 0000</a>
+          <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4.5 8-11a8 8 0 1 0-16 0c0 6.5 8 11 8 11Z"/><circle cx="12" cy="11" r="2.5"/></svg><span data-i18n="contact.location">Riyadh, Saudi Arabia</span></a>
         </div>
       </div>
       <div class="social-row">
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 17v-7"></path></svg></a>
-        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20l1.3-3.9A8 8 0 1 1 8.5 19L4 20Z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg></a>
-        <a href="mailto:hello@syedalitanveer.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 17v-7"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20l1.3-3.9A8 8 0 1 1 8.5 19L4 20Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg></a>
+        <a href="mailto:hello@syedalitanveer.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
       </div>
     </div>
 
@@ -877,8 +873,8 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
       
       <div class="form-row">
         <div class="field">
-          <label for="fname" data-i18n="contact.fname">Full name</label>
-          <input type="text" id="fname" name="name" required="" autocomplete="name" placeholder="John Doe">
+          <label for="fname" data-i18n="contact.fname">Full name *</label>
+          <input type="text" id="fname" name="name" required autocomplete="name" placeholder="John Doe">
         </div>
         <div class="field">
           <label for="company" data-i18n="contact.fcompany">Company</label>
@@ -887,8 +883,8 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
       </div>
       <div class="form-row">
         <div class="field">
-          <label for="email" data-i18n="contact.femail">Email</label>
-          <input type="email" id="email" name="email" required="" autocomplete="email" placeholder="john@example.com">
+          <label for="email" data-i18n="contact.femail">Email *</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
         </div>
         <div class="field">
           <label for="phone" data-i18n="contact.fphone">Phone</label>
@@ -906,14 +902,17 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
         </select>
       </div>
       <div class="field">
-        <label for="message" data-i18n="contact.fmessage">Message</label>
-        <textarea id="message" name="message" required="" data-i18n-placeholder="contact.fmessagePh" placeholder="A little about your business and what you need help with..."></textarea>
+        <label for="message" data-i18n="contact.fmessage">Message *</label>
+        <textarea id="message" name="message" required data-i18n-placeholder="contact.fmessagePh" placeholder="A little about your business and what you need help with..."></textarea>
       </div>
       <div class="form-foot">
-        <div id="formStatus" class="form-status"></div>
+        <span class="form-note" data-i18n="contact.note"> </span>
         <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="contact.submit">Send Message</button>
       </div>
     </form>
+    
+    <!-- Form Status Message -->
+    <div id="formStatus" class="form-status"></div>
   </div>
 </section>
 </main>
@@ -942,7 +941,7 @@ footer{padding-block:50px 34px;border-top:1px solid var(--line);margin-top:40px;
         <h5 data-i18n="footer.h3">Contact</h5>
         <a href="mailto:hello@syedalitanveer.com">hello@syedalitanveer.com</a>
         <a href="tel:+966500000000">+966 50 000 0000</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="#contact" data-i18n="nav.contact">Contact form</a>
       </div>
     </div>
   </div>
@@ -1051,7 +1050,7 @@ const translations = {
     "contact.opt1":"مسك الدفاتر","contact.opt2":"المحاسبة والتقارير المالية","contact.opt3":"تطبيق نظام أودو","contact.opt4":"دعم وتحسين أودو","contact.opt5":"غير متأكد بعد",
     "contact.fmessage":"الرسالة","contact.fmessagePh":"لمحة عن عملك وما تحتاج المساعدة فيه...",
     "contact.note":" ","contact.submit":"إرسال الرسالة",
-    "contact.success":"!نشكرك على تواصلك معنا! سنرد عليك في أقرب وقت.",
+    "contact.success":"شكراً! تم فتح تطبيق البريد الإلكتروني الخاص بك مع رسالتك الجاهزة للإرسال.",
     "footer.desc":"استشارات محاسبة ومسك دفاتر وتطبيق أودو للشركات النامية في دول الخليج.",
     "footer.h1":"الخدمات","footer.h2":"الشركة","footer.h3":"تواصل","footer.rights":"جميع الحقوق محفوظة.","footer.tag":"دفاتر متوازنة. أنظمة قابلة للنمو."
   }
@@ -1248,7 +1247,7 @@ form.addEventListener('submit', async function(e) {
       // Success messages matching the image exactly
       const successMessages = {
         en: 'Thanks! Your email app should now be open with your message ready to send.',
-        ar: '!نشكرك على تواصلك معنا! سنرد عليك في أقرب وقت.'
+        ar: 'شكراً! تم فتح تطبيق البريد الإلكتروني الخاص بك مع رسالتك الجاهزة للإرسال.'
       };
       
       formStatus.innerHTML = `<span class="status-icon">${checkIconSVG}</span><span class="status-text">${successMessages[lang] || successMessages.en}</span>`;
@@ -1317,7 +1316,7 @@ initTheme();
 applyLang(localStorage.getItem('sat-lang') || 'en');
 
 </script>
+</body>
+</html>
 
 
-
-</body></html>
